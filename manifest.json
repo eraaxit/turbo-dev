@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Turbo Dev",
+    "version": "0.0.1",
+    "description": "Add turbo dev tools to your browser to access them in a fast and easy way.",
+    "icons": {
+        "16": "./assets/icon.png",
+        "48": "./assets/icon.png",
+        "128": "./assets/icon.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "./assets/icon.png",
+            "48": "./assets/icon.png",
+            "128": "./assets/icon.png"
+        },
+        "default_title": "Turbo Dev",
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline';"
+    },
+    "content_scripts": [
+        {
+            "js": ["run.js"],
+            "matches": ["*://*/*"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "contextMenus",
+        "webRequest",
+        "webRequestBlocking",
+        "cookies",
+        "http://*/*",
+        "https://*/*",
+        "debugger",
+        "declarativeNetRequestWithHostAccess"
+    ]
+}

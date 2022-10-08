@@ -1,0 +1,53 @@
+:root {
+    --app-blue: rgba(30, 144, 255, 1);
+    --app-pink: rgba(255, 30, 86, 1);
+    --app-blue-light: rgba(30, 144, 255, 0.4);
+    --app-pink-light: rgba(255, 30, 86, 0.4);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: initial;
+    font-family: Arial, sans-serif;
+}
+
+.app-wrapper {
+    width: 500px;
+    background: rgb(245, 245, 245);
+    margin: auto;
+    padding: 16px;
+}
+
+.logo {
+    height: 50px;
+    background: url(./assets/logo.png) no-repeat;
+    background-size: contain;
+}
+
+.info-text {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    background: var(--app-blue);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--app-blue-light);
+}
+
+button:active {
+    transform: scale(0.9);
+}
