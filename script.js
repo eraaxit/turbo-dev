@@ -38,21 +38,32 @@ function allEventHandler(debuggeeId, message, params) {
     }
 }
 
-function popup() {
+function start() {
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         currentTab = tabs[0];
         chrome.webRequest.onBeforeRequest.addListener(
             function (details) {
-                console.log("onCompleted", details);
-                return { cancel: true };
+                console.log("onBeforeRequest", details);
+                // return { cancel: true };
             },
             { urls: ["*://*/*"] },
             []
         );
+        chrome.webRequest.onCompleted.addListener(
+            function (details) {
+                console.log("onCompleted", details);
+                // return { cancel: true };
+            },
+            { urls: ["*://*/*"] },
+            []
+        );
+        console.log("events added");
         // chrome.tabs.sendMessage(currentTab.id, { message: "start" });
     });
-    console.log("sent from popup");
+    document.getElementById("run-button").innerHTML = "Running...";
 }
+
+document.getElementById("run-button").addEventListener("click", start);
 
 // chrome.tabs.query(
 //     //get current Tab

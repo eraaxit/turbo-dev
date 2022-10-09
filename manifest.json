@@ -17,26 +17,15 @@
         "default_title": "Turbo Dev",
         "default_popup": "popup.html"
     },
-    "content_security_policy": {
-        "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline';"
-    },
     "content_scripts": [
         {
             "js": ["run.js"],
             "matches": ["*://*/*"]
         }
     ],
-    "permissions": [
-        "activeTab",
-        "tabs",
-        "storage",
-        "contextMenus",
-        "webRequest",
-        "webRequestBlocking",
-        "cookies",
-        "http://*/*",
-        "https://*/*",
-        "debugger",
-        "declarativeNetRequestWithHostAccess"
-    ]
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["activeTab", "tabs", "webRequest", "scripting"],
+    "host_permissions": ["http://*/*", "https://*/*", "<all_urls>"]
 }
