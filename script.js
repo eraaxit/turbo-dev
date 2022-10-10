@@ -39,30 +39,35 @@ function allEventHandler(debuggeeId, message, params) {
 }
 
 function start() {
+    chrome.tabs.sendMessage(currentTab.id, { message: "start" });
+    document.getElementById("run-button").innerHTML = "Running...";
+}
+
+function startSendingRequests() {
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         currentTab = tabs[0];
-        chrome.webRequest.onBeforeRequest.addListener(
-            function (details) {
-                console.log("onBeforeRequest", details);
-                // return { cancel: true };
-            },
-            { urls: ["*://*/*"] },
-            []
-        );
+        // chrome.webRequest.onBeforeRequest.addListener(
+        //     function (details) {
+        //         console.log("onBeforeRequest", details);
+        //     },
+        //     { urls: ["*://*/*"] },
+        //     []
+        // );
         chrome.webRequest.onCompleted.addListener(
             function (details) {
-                console.log("onCompleted", details);
-                // return { cancel: true };
+                chrome.tabs.sendMessage(currentTab.id, {
+                    message: "requestDetails",
+                    data: JSON.stringify(details),
+                });
+                console.log("sent onCompleted details");
             },
             { urls: ["*://*/*"] },
             []
         );
         console.log("events added");
-        // chrome.tabs.sendMessage(currentTab.id, { message: "start" });
     });
-    document.getElementById("run-button").innerHTML = "Running...";
 }
-
+startSendingRequests();
 document.getElementById("run-button").addEventListener("click", start);
 
 // chrome.tabs.query(

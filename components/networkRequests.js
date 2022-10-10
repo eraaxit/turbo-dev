@@ -48,3 +48,91 @@ const REQUESTS = [
         url: "https://www.googletagmanager.com/gtag/js?id=G-L7M8WVYFKW",
     },
 ];
+
+/**
+ *         <div id="network-requests-box">
+            <div class="box-controllers">
+                <div class="close">❌</div>
+                <div class="minimize">➖</div>
+            </div>
+            <div class="requests-list">
+                <div class="single-request-wrapper">
+                    <div class="request-info">
+                        <div class="request-method">GET</div>
+                        <div class="request-url">https://www.google.com/</div>
+                    </div>
+                    <div class="request-status">200</div>
+                </div>
+                <div class="single-request-wrapper">
+                    <div class="request-info">
+                        <div class="request-method">GET</div>
+                        <div class="request-url">https://www.google.com/</div>
+                    </div>
+                    <div class="request-status">200</div>
+                </div>
+                <div class="single-request-wrapper">
+                    <div class="request-info">
+                        <div class="request-method">GET</div>
+                        <div class="request-url">https://www.google.com/</div>
+                    </div>
+                    <div class="request-status">200</div>
+                </div>
+                <div class="single-request-wrapper">
+                    <div class="request-info">
+                        <div class="request-method">GET</div>
+                        <div class="request-url">https://www.google.com/</div>
+                    </div>
+                    <div class="request-status">200</div>
+                </div>
+                <div class="single-request-wrapper">
+                    <div class="request-info">
+                        <div class="request-method">GET</div>
+                        <div class="request-url">https://www.google.com/</div>
+                    </div>
+                    <div class="request-status">200</div>
+                </div>
+            </div>
+        </div>
+ */
+
+function embeddedRequestBox() {
+    const networkRequestsBox = document.createElement("div");
+    networkRequestsBox.id = "network-requests-box";
+    networkRequestsBox.innerHTML = `
+        <div class="box-controllers">
+            <div class="close">❌</div>
+            <div class="minimize">➖</div>
+        </div>
+        <div class="requests-list">
+        </div>
+    `;
+    document.body.appendChild(networkRequestsBox);
+    const requestsList = networkRequestsBox.querySelector(".requests-list");
+    REQUESTS.forEach((request) => {
+        const singleRequestWrapper = document.createElement("div");
+        singleRequestWrapper.classList.add("single-request-wrapper");
+        singleRequestWrapper.innerHTML = `
+            <div class="request-info">
+                <div class="request-method">${request.method}</div>
+                <div class="request-url">${request.url}</div>
+            </div>
+            <div class="request-status">${request.statusCode}</div>
+        `;
+        requestsList.appendChild(singleRequestWrapper);
+    });
+
+    const closeBtn = networkRequestsBox.querySelector(".close");
+    closeBtn.addEventListener("click", () => {
+        networkRequestsBox.remove();
+    });
+
+    const minimizeBtn = networkRequestsBox.querySelector(".minimize");
+    minimizeBtn.addEventListener("click", () => {
+        networkRequestsBox.classList.toggle("minimized");
+    });
+}
+
+const runButton = document.querySelector("#run-button");
+runButton.addEventListener("click", () => {
+    embeddedRequestBox();
+});
