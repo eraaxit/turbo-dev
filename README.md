@@ -2,7 +2,7 @@
 
 <h1>Turbo Dev</h1>
 
-<h3>Objective</h3>
+<h3>Objective :-</h3>
 
 <li>
    To let developers see network requests in a convinient way.
@@ -13,3 +13,6 @@
 </li>
 
 <li>By the time, provide all famous developers tools in this extensions.</li>
+<li>
+   This tool let developers to increase efficiency without refreshing repeatedly
+</li>
