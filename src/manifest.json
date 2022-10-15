@@ -19,7 +19,7 @@
     },
     "content_scripts": [
         {
-            "js": ["run.js", "components/networkRequests.js"],
+            "js": ["./components/networkRequests.js","run.js"],
             "css": ["./components/networkRequests.css"],
             "matches": ["*://*/*"],
             "run_at": "document_start"
