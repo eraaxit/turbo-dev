@@ -1,46 +1,46 @@
 {
-    "manifest_version": 3,
-    "name": "Turbo Dev",
-    "version": "0.0.1",
-    "description": "Add turbo dev tools to your browser to access them in a fast and easy way.",
-    "icons": {
-        "16": "./assets/icon.png",
-        "48": "./assets/icon.png",
-        "128": "./assets/icon.png"
+  "manifest_version": 3,
+  "name": "Turbo Dev",
+  "version": "0.0.1",
+  "description": "Add turbo dev tools to your browser to access them in a fast and easy way.",
+  "icons": {
+    "16": "./assets/icon.png",
+    "48": "./assets/icon.png",
+    "128": "./assets/icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "./assets/icon.png",
+      "48": "./assets/icon.png",
+      "128": "./assets/icon.png"
     },
-    "action": {
-        "default_icon": {
-            "16": "./assets/icon.png",
-            "48": "./assets/icon.png",
-            "128": "./assets/icon.png"
-        },
-        "default_title": "Turbo Dev",
-        "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
-            "js": ["run.js"],
-            "css": ["./components/networkRequests.css"],
-            "matches": ["*://*/*"],
-            "run_at": "document_start"
-        }
-    ],
-    "background": {
-        "service_worker": "background.js"
-    },
-    "permissions": [
-        "activeTab",
-        "tabs",
-        "webRequest",
-        "scripting",
-        "storage",
-        "unlimitedStorage",
-        "notifications",
-        "background",
-        "contextMenus",
-        "cookies",
-        "webNavigation",
-        "webRequest"
-    ],
-    "host_permissions": ["http://*/*", "https://*/*", "<all_urls>"]
+    "default_title": "Turbo Dev",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["run.js"],
+      "css": ["./components/networkRequests.css"],
+      "matches": ["*://*/*"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "webRequest",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "notifications",
+    "background",
+    "contextMenus",
+    "cookies",
+    "webNavigation",
+    "webRequest"
+  ],
+  "host_permissions": ["http://*/*", "https://*/*", "<all_urls>"]
 }
