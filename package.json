@@ -24,6 +24,8 @@
     "browserify": "^17.0.0",
     "cssnano": "^5.1.13",
     "del": "^2.2.2",
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
     "event-stream": "^4.0.1",
     "glob": "^8.0.3",
     "gulp": "latest",

@@ -19,14 +19,14 @@
     },
     "content_scripts": [
         {
-            "js": ["./components/networkRequests.js","run.js"],
+            "js": ["run.js"],
             "css": ["./components/networkRequests.css"],
             "matches": ["*://*/*"],
             "run_at": "document_start"
         }
     ],
     "background": {
-        "service_worker": "./background.js"
+        "service_worker": "background.js"
     },
     "permissions": [
         "activeTab",
