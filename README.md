@@ -1,4 +1,3 @@
-
 <img src="https://i.imgur.com/gcglveQ.png" alt="Turbo" width="200" />
 
 <h1>Turbo Dev</h1>
@@ -35,11 +34,14 @@ This extension works with any browser, we suggest to debug on :
 <b>Run in Chrome :-</b>
 <li>open <a href="chrome://extensions">chrome://extensions</a> in chrome browser.</li>
 <li>Turn developer mode on. </li>
-<li>Click load unpacked, upload the application folder.</li>
+<li>Click "load unpacked" button, and upload the application folder.</li>
 <li>Now you should now see extension in your browser toolbar.</li>
 <li>After making any changes in the app, refresh your extension on the browser. </li>
 
 <br/>
 <b>Run in firefox :-</b>
 
-<li>open <a href="about:addons">about:addons</a> in firefox browser.</li>
+<li>open <a href="about:debugging#/runtime/this-firefox">about:debugging#/runtime/this-firefox</a> in firefox browser.</li>
+<li>Click Load Temporary add-on..,button and  upload the manifest.json</li>
+<li>Now you should now see extension in your browser toolbar.</li>
+<li>After making any changes in the app, refresh your extension on the browser. </li>
