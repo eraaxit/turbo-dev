@@ -1,138 +1,50 @@
-const REQUESTS = [
-    {
-        documentId: "EC7196FD2B44C1B5C6ACAE6F18BC3C92",
-        documentLifecycle: "active",
-        frameId: 0,
-        frameType: "outermost_frame",
-        fromCache: false,
-        initiator: "https://myaccount.google.com",
-        ip: "142.250.193.206",
-        method: "GET",
-        parentFrameId: -1,
-        requestId: "18731",
-        statusCode: 204,
-        statusLine: "HTTP/1.1 204",
-        tabId: 2073115190,
-        timeStamp: 1665302348244.938,
-        type: "image",
-        url: "https://myaccount.google.com/u/3/_/AccountSettingsUi/gen204/?tmambps=0.0004469574780058651&rtembps=-1&rttms=9&ct=undefined",
-    },
-    {
-        frameId: -1,
-        fromCache: true,
-        initiator: "https://csecrew.com",
-        ip: "142.250.193.234",
-        method: "GET",
-        parentFrameId: -1,
-        requestId: "18750",
-        statusCode: 200,
-        statusLine: "HTTP/1.1 200",
-        tabId: -1,
-        timeStamp: 1665302351863.93,
-        type: "xmlhttprequest",
-        url: "https://fonts.googleapis.com/css?family=Assistant",
-    },
-    {
-        frameId: -1,
-        fromCache: false,
-        initiator: "https://csecrew.com",
-        ip: "142.250.194.8",
-        method: "GET",
-        parentFrameId: -1,
-        requestId: "18754",
-        statusCode: 200,
-        statusLine: "HTTP/1.1 200",
-        tabId: -1,
-        timeStamp: 1665302352401.04,
-        type: "xmlhttprequest",
-        url: "https://www.googletagmanager.com/gtag/js?id=G-L7M8WVYFKW",
-    },
-];
+function dragElement(elmnt) {
+    var pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+        // if present, the header is where you move the DIV from:
+        document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+    } else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+    }
 
-/**
- *         <div id="network-requests-box">
-            <div class="box-controllers">
-                <div class="close">❌</div>
-                <div class="minimize">➖</div>
-            </div>
-            <div class="requests-list">
-                <div class="single-request-wrapper">
-                    <div class="request-info">
-                        <div class="request-method">GET</div>
-                        <div class="request-url">https://www.google.com/</div>
-                    </div>
-                    <div class="request-status">200</div>
-                </div>
-                <div class="single-request-wrapper">
-                    <div class="request-info">
-                        <div class="request-method">GET</div>
-                        <div class="request-url">https://www.google.com/</div>
-                    </div>
-                    <div class="request-status">200</div>
-                </div>
-                <div class="single-request-wrapper">
-                    <div class="request-info">
-                        <div class="request-method">GET</div>
-                        <div class="request-url">https://www.google.com/</div>
-                    </div>
-                    <div class="request-status">200</div>
-                </div>
-                <div class="single-request-wrapper">
-                    <div class="request-info">
-                        <div class="request-method">GET</div>
-                        <div class="request-url">https://www.google.com/</div>
-                    </div>
-                    <div class="request-status">200</div>
-                </div>
-                <div class="single-request-wrapper">
-                    <div class="request-info">
-                        <div class="request-method">GET</div>
-                        <div class="request-url">https://www.google.com/</div>
-                    </div>
-                    <div class="request-status">200</div>
-                </div>
-            </div>
-        </div>
- */
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+    }
 
-function embeddedRequestBox() {
-    const networkRequestsBox = document.createElement("div");
-    networkRequestsBox.id = "network-requests-box";
-    networkRequestsBox.innerHTML = `
-        <div class="box-controllers">
-            <div class="close">❌</div>
-            <div class="minimize">➖</div>
-        </div>
-        <div class="requests-list">
-        </div>
-    `;
-    document.body.appendChild(networkRequestsBox);
-    const requestsList = networkRequestsBox.querySelector(".requests-list");
-    REQUESTS.forEach((request) => {
-        const singleRequestWrapper = document.createElement("div");
-        singleRequestWrapper.classList.add("single-request-wrapper");
-        singleRequestWrapper.innerHTML = `
-            <div class="request-info">
-                <div class="request-method">${request.method}</div>
-                <div class="request-url">${request.url}</div>
-            </div>
-            <div class="request-status">${request.statusCode}</div>
-        `;
-        requestsList.appendChild(singleRequestWrapper);
-    });
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+        elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    }
 
-    const closeBtn = networkRequestsBox.querySelector(".close");
-    closeBtn.addEventListener("click", () => {
-        networkRequestsBox.remove();
-    });
-
-    const minimizeBtn = networkRequestsBox.querySelector(".minimize");
-    minimizeBtn.addEventListener("click", () => {
-        networkRequestsBox.classList.toggle("minimized");
-    });
+    function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
 }
 
-const runButton = document.querySelector("#run-button");
-runButton.addEventListener("click", () => {
-    embeddedRequestBox();
-});
+// window.onload = function () {
+//     setTimeout(() => {
+//         dragElement(document.getElementById("network-requests-box"));
+//     }, 2000);
+// };
