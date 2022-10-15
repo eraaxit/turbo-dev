@@ -22,7 +22,7 @@
 
 .logo {
     height: 50px;
-    background: url(./assets/logo.png) no-repeat;
+    background: url(../assets/logo.png) no-repeat;
     background-size: contain;
 }
 
