@@ -18,6 +18,11 @@
 <li>
    This tool let developers to increase efficiency without refreshing repeatedly
 </li>
+<hr>
+
+### Contributing
+If you want to contribute to this project and make it better with new ideas, your pull request is very welcomed.
+If you find any issue just put it in the repository issue section, thank you.
 
 <hr>
 
@@ -45,3 +50,5 @@ This extension works with any browser, we suggest to debug on :
 <li>Click Load Temporary add-on..,button and  upload the manifest.json</li>
 <li>Now you should now see extension in your browser toolbar.</li>
 <li>After making any changes in the app, refresh your extension on the browser. </li>
+
+

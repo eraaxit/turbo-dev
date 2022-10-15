@@ -1,0 +1,46 @@
+{
+  "name": "turbo-dev",
+  "version": "1.0.0",
+  "description": "The tool you always needed and now you have it",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eraaxit/turbo-dev.git"
+  },
+  "author": "vsanse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eraaxit/turbo-dev/issues"
+  },
+  "homepage": "https://github.com/eraaxit/turbo-dev#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "cssnano": "^5.1.13",
+    "del": "^2.2.2",
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "event-stream": "^4.0.1",
+    "glob": "^8.0.3",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^3.0.0",
+    "merge-stream": "^2.0.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "webextension-polyfill": "^0.10.0"
+  }
+}
