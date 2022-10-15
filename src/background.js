@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 function startSendingRequests() {
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-        currentTab = tabs[0];
+        const currentTab = tabs[0];
         // chrome.webRequest.onBeforeRequest.addListener(
         //     function (details) {
         //         console.log("onBeforeRequest", details);
