@@ -33,7 +33,7 @@ This extension works with any browser, we suggest to debug on :
 <ul>
 <li>Chrome</li>
 <li>Firefox</li>
-<li>Safari</li>
+<li>Edge</li>
 </ul>
 <br/>
 <b>Run in Chrome :-</b>
@@ -50,5 +50,13 @@ This extension works with any browser, we suggest to debug on :
 <li>Click Load Temporary add-on..,button and  upload the manifest.json</li>
 <li>Now you should now see extension in your browser toolbar.</li>
 <li>After making any changes in the app, refresh your extension on the browser. </li>
+<br/>
+<b>Run in Edge :-</b>
+
+<li>open Microsft edge</li>
+<li>Now, click on the 3-dot menu icon on the top-right corner and then select extensions</li>
+<li>Then click on the left-hand side, you will see a “Developer options” toggle. Turn it ON. This will basically allow you to download external extensions     onto the Microsoft Edge browser.</li>
+<li>Click "load unpacked" button, and upload the application folder.</li>
+<li>The extension will then load up on the Microsoft Edge browser</li>
 
 
