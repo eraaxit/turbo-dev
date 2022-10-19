@@ -59,4 +59,9 @@ This extension works with any browser, we suggest to debug on :
 <li>Click "load unpacked" button, and upload the application folder.</li>
 <li>The extension will then load up on the Microsoft Edge browser</li>
 
+<b>To create build</b>
+
+<li>This project uses gulp as of now, run <code>yarn build</code></li>
+<li>A folder by name dist will be created which you can load as unpacked in your browser.</li>
+
 
