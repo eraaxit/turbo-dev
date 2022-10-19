@@ -58,8 +58,8 @@ This extension works with any browser, we suggest to debug on :
 <li>Then click on the left-hand side, you will see a “Developer options” toggle. Turn it ON. This will basically allow you to download external extensions     onto the Microsoft Edge browser.</li>
 <li>Click "load unpacked" button, and upload the application folder.</li>
 <li>The extension will then load up on the Microsoft Edge browser</li>
-
-<b>To create build</b>
+<br/>
+<b>To create build:-</b>
 
 <li>This project uses gulp as of now, run <code>yarn build</code></li>
 <li>A folder by name dist will be created which you can load as unpacked in your browser.</li>
