@@ -64,4 +64,7 @@ This extension works with any browser, we suggest to debug on :
 <li>This project uses gulp as of now, run <code>yarn build</code></li>
 <li>A folder by name dist will be created which you can load as unpacked in your browser.</li>
 
+# Project Theme : 
+https://www.figma.com/file/fOsG9ysKspZpTPG3I7Umul/V1?node-id=1%3A70
+<img width="1074" alt="image" src="https://user-images.githubusercontent.com/26194323/196919308-23ea8b0c-d16b-465c-9ef8-eb2a49d1c14f.png">
 
