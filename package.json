@@ -5,7 +5,8 @@
   "main": "background.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp"
+    "build": "gulp",
+    "commit": "dev c"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,14 @@
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
+    "commitizen": "^4.2.5",
     "cssnano": "^5.1.13",
     "del": "^2.2.2",
+    "deva-cli": "^0.3.5",
     "eslint": ">=5.16.0",
     "eslint-config-google": "^0.14.0",
     "event-stream": "^4.0.1",
@@ -35,10 +40,16 @@
     "gulp-postcss": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^3.0.0",
+    "husky": "^1.1.2",
     "merge-stream": "^2.0.0",
     "run-sequence": "^2.2.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
     "webextension-polyfill": "^0.10.0"
