@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
-    "commit": "dev c"
+    "commit": "dev c",
+    "talisman": "node-talisman --githook=pre-commit"  
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eraaxit/turbo-dev.git"
   },
+
   "author": "vsanse",
   "license": "ISC",
   "bugs": {
@@ -42,13 +44,15 @@
     "gulp-uglify-es": "^3.0.0",
     "husky": "^1.1.2",
     "merge-stream": "^2.0.0",
+    "node-talisman": "^1.23.0",
     "run-sequence": "^2.2.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS", 
+      "pre-commit": "npm run talisman"
     }
   },
   "dependencies": {
