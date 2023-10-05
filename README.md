@@ -4,9 +4,11 @@
 
 # Turbo Dev
 
+
 ## Introduction :-</h2>
 
 Turbo Dev is a powerful browser extension that let you see the network calls in a very convenient way, and help you to increase the efficiency for your web page.
+
 
 ## Objective :-
 <li>
@@ -19,9 +21,11 @@ Turbo Dev is a powerful browser extension that let you see the network calls in 
 
 <li>Provide a suite of developer tools to improve efficiency</li>
 
+
 ## Contributing
 
 We welcome contributions to this project and encourage you to bring in new ideas. Your pull request is very much welcomed! If you encounter any issues, please don't hesitate to report them in the repository's issue section. Thank you for your support.
+
 
 ## Getting Started
 
