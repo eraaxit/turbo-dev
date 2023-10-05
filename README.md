@@ -1,7 +1,9 @@
 <img src="https://i.imgur.com/gcglveQ.png" alt="Turbo" width="200" />
-
-<h1>Turbo Dev</h1> <img src="https://i.imgur.com/gcglveQ.png" alt="Turbo" width="200" />
-<h2>Introduction :-</h2>
+<ul>
+<li><h1>Turbo Dev</h1></li>
+<li><img src="https://i.imgur.com/gcglveQ.png" alt="Turbo" width="200" /></li>
+<li></li><h2>Introduction :-</h2></li>
+</ul>
 
 <p> This is a browser extension that let you see the network calls in a very convenient way, and help you to increase the efficiency for your web page.</p>
 
