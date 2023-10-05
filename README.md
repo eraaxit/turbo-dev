@@ -1,7 +1,6 @@
 <p align="center">
   <img src="https://i.imgur.com/gcglveQ.png" alt="Turbo" width="200" />
 </p>
-
 # Turbo Dev
 
 
