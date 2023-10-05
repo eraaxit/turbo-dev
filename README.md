@@ -1,11 +1,8 @@
 <p align="center">
   <img src="https://i.imgur.com/gcglveQ.png" alt="Turbo" width="200" />
-  
 </p>
 
-<p align="center">
-  <h1>Turbo Dev</h1>
-</p>
+<h1>Turbo Dev</h1>
 
 <h2>Introduction :-</h2>
 
