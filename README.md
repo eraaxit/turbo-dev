@@ -1,70 +1,78 @@
-<img src="https://i.imgur.com/gcglveQ.png" alt="Turbo" width="200" />
+<p align="center">
+  <img src="https://i.imgur.com/gcglveQ.png" alt="Turbo" width="200" />
+</p>
+# Turbo Dev
 
-<h1>Turbo Dev</h1>
-<h2>Introduction :-</h2>
 
-<p> This is a browser extension that let you see the network calls in a very convenient way, and help you to increase the efficiency for your web page.</p>
+## Introduction :-</h2>
 
-<h3>Objective :-</h3>
+Turbo Dev is a powerful browser extension that let you see the network calls in a very convenient way, and help you to increase the efficiency for your web page.
+
+
+## Objective :-
 <li>
    To let developers see network requests in a convenient way.
 </li>
 
 <li>
-   To give functionality to test a certain requests without need of reloading page again and again.
+   Test individual network requests without reloading the page
 </li>
 
-<li>By the time, provide all famous developers tools in this extensions.</li>
-<li>
-   This tool let developers to increase efficiency without refreshing repeatedly
-</li>
-<hr>
+<li>Provide a suite of developer tools to improve efficiency</li>
 
-### Contributing
-If you want to contribute to this project and make it better with new ideas, your pull request is very welcomed.
-If you find any issue just put it in the repository issue section, thank you.
 
-<hr>
+## Contributing
 
-<h2>How to run application locally:-</h2>
+We welcome contributions to this project and encourage you to bring in new ideas. Your pull request is very much welcomed! If you encounter any issues, please don't hesitate to report them in the repository's issue section. Thank you for your support.
 
-<h3>Prerequisite :-</h3>
-This extension works with any browser, we suggest to debug on :
-<ul>
-<li>Chrome</li>
-<li>Firefox</li>
-<li>Edge</li>
-</ul>
-<br/>
-<b>Run in Chrome :-</b>
-<li>open <a href="chrome://extensions">chrome://extensions</a> in chrome browser.</li>
-<li>Turn developer mode on. </li>
-<li>Click "load unpacked" button, and upload the application folder.</li>
-<li>Now you should now see extension in your browser toolbar.</li>
-<li>After making any changes in the app, refresh your extension on the browser. </li>
 
-<br/>
-<b>Run in firefox :-</b>
+## Getting Started
 
-<li>open <a href="about:debugging#/runtime/this-firefox">about:debugging#/runtime/this-firefox</a> in firefox browser.</li>
-<li>Click Load Temporary add-on..,button and  upload the manifest.json</li>
-<li>Now you should now see extension in your browser toolbar.</li>
-<li>After making any changes in the app, refresh your extension on the browser. </li>
-<br/>
-<b>Run in Edge :-</b>
+### Prerequisites
 
-<li>open Microsft edge</li>
-<li>Now, click on the 3-dot menu icon on the top-right corner and then select extensions</li>
-<li>Then click on the left-hand side, you will see a “Developer options” toggle. Turn it ON. This will basically allow you to download external extensions     onto the Microsoft Edge browser.</li>
-<li>Click "load unpacked" button, and upload the application folder.</li>
-<li>The extension will then load up on the Microsoft Edge browser</li>
-<br/>
-<b>To create build:-</b>
+This extension works with any browser, but we suggest debugging on:
 
-<li>This project uses gulp as of now, run <code>yarn build</code></li>
-<li>A folder by name dist will be created which you can load as unpacked in your browser.</li>
+- Chrome
+- Firefox
+- Edge
 
-# Project Theme : 
-https://www.figma.com/file/fOsG9ysKspZpTPG3I7Umul/V1?node-id=1%3A70
-<img width="1074" alt="image" src="https://user-images.githubusercontent.com/26194323/196919308-23ea8b0c-d16b-465c-9ef8-eb2a49d1c14f.png">
+### Running in Chrome
 
+1. Open `chrome://extensions` in Chrome browser.
+2. Enable developer mode.
+3. Click the "Load unpacked" button, and upload the application folder.
+4. You should now see the extension in your browser toolbar.
+5. After making any changes in the app, refresh your extension in the browser.
+
+### Running in Firefox
+
+1. Open `about:debugging#/runtime/this-firefox` in the Firefox browser.
+2. Click "Load Temporary add-on..." and  upload the `manifest.json` file.
+3. You should now see the Turbo Dev extension in your browser's toolbar.
+4. After making any changes in the app, refresh your extension on the browser.
+
+### Running in Edge
+
+1. Open Microsoft Edge.
+2. Click the three-dot menu icon in the top-right corner and select "Extensions."
+3. On the left-hand side, toggle on "Developer options."
+4. Click the "Load unpacked" button and select the application folder.
+5. The Turbo Dev extension will load in the Microsoft Edge browser.
+
+### Creating a Build
+
+1. This project uses Gulp. Run the following command:
+
+   ```bash
+   yarn build
+A `dist` folder will be created, containing the build files that you can load as an unpacked extension in your browser.
+
+<div align="center" style="background-color: #f7f7f7; padding: 20px;">
+  <h1 style="font-size: 24px;">🎨 Project Theme</h1>
+  <p style="font-size: 16px; color: #333;">Explore the project's design theme on Figma for a sneak peek into our creative vision.</p>
+  <a href="https://www.figma.com/file/fOsG9ysKspZpTPG3I7Umul/V1?node-id=1%3A70" style="background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; font-size: 16px;">
+    View Project Theme
+  </a>
+  <br><br>
+  <img width="1074" alt="Project Theme" src="https://user-images.githubusercontent.com/26194323/196919308-23ea8b0c-d16b-465c-9ef8-eb2a49d1c14f.png">
+</div>
